@@ -191,11 +191,7 @@
 
   const coviddata = () => {
     const coviddatadiv = document.querySelector('#coviddatadiv');
-    let covidjson = '../m/data/coviddata.json'
-
-    if (location.hostname == '127.0.0.1') {
-      covidjson = '../data/coviddata.json'
-    }
+    let covidjson = '../data/coviddata.json'
 
     const mr = new Request(covidjson);
     fetch(mr)
