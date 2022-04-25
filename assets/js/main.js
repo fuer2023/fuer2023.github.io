@@ -151,11 +151,7 @@
     const dailynoticediv = document.querySelector('#dailynoticediv');
     const todaydatep = document.querySelector('#todaydatep');
 
-    let covidjson = '../m/data/covidnotice.json'
-
-    if (location.hostname == '127.0.0.1') {
-      covidjson = '../data/covidnotice.json'
-    }
+    let covidjson = '../data/covidnotice.json'
 
     const mr = new Request(covidjson);
     let dailynotice = '';
