@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fuer2023/m.git"
+    "url": "git+https://github.com/fuer2023/fuer2023.github.io.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fuer2023/m/issues"
+    "url": "https://github.com/fuer2023/fuer2023.github.io/issues"
   },
-  "homepage": "https://github.com/fuer2023/m#readme",
+  "homepage": "https://github.com/fuer2023/fuer2023.github.io#readme",
   "dependencies": {
     "axios": "^0.26.1"
   },
