@@ -98,13 +98,32 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+#data .covid-icon-box h2 {
+  display: block;
+  padding: 8px 2px;
+}
+
+#data .covid-icon-box h2:first-child {
+  padding-bottom: 0px;
+}
+
 .covid-icon-box {
   text-align: center;
   border: 1px solid #19875485;
-  padding: 20px;
+  padding: 8px;
   transition: all ease-in-out 0.3s;
   background: #fff;
   margin-bottom: 20px;
+}
+
+#services .icon-box {
+  min-width: 174px;
+}
+
+#services .icon-box img {
+  width: 124px;
+  height: 57px;
+  display: block;
 }
 
 #topbar {
@@ -754,9 +773,10 @@ section {
 }
  
 .services .icon-box {
+  margin-bottom: 20px;
   text-align: center;
   border: 1px solid #19875485;
-  padding: 80px 20px;
+  padding: 22px 22px;
   transition: all ease-in-out 0.3s;
   background: #fff;
 }
@@ -778,9 +798,9 @@ section {
   transition: ease-in-out 0.3s;
 }
 .services .icon-box h4 {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 24px;
+  font-weight: 500;
+  margin: 15px 0;
+  font-size: 18px;
 }
 .services .icon-box h4 a {
   color: #333;
