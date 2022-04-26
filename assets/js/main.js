@@ -159,6 +159,9 @@
         todaydatep.innerHTML = data.today.d.toString();
         todaynoticediv.innerHTML = data.today.n.toString().replaceAll('\n', '<br/>');
 
+        todayxianyidatep.innerHTML = data.todayxianyi.d.toString();
+        todayxianyinoticediv.innerHTML = data.todayxianyi.n.toString().replaceAll('\n', '<br/>');
+
         let daily = data.daily;
         for (let i of daily) {
           let daten = i.d.toString()
@@ -191,6 +194,10 @@
   const coviddata = () => {
     const coviddatadiv = document.querySelector('#coviddatadiv');
     let covidjson = '../data/coviddata.json'
+
+    const fuerdata = document.querySelector('#fuerdata');
+    const xianyidata = document.querySelector('#xianyidata');
+    const maoxindata = document.querySelector('#maoxindata');
 
     const mr = new Request(covidjson);
     fetch(mr)
