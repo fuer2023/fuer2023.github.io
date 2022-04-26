@@ -116,6 +116,14 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
 }
 
+.datebadge {
+  background-color: #006837;
+  color: #fff;
+  padding: 2px 10px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
 #services .icon-box {
   min-width: 174px;
 }
@@ -637,9 +645,14 @@ section {
 }
 .featured-services .description {
   font-size: 15px;
-  line-height: 28px;
+  line-height: 24px;
   margin-bottom: 0;
 }
+
+#todaynoticediv {
+  line-height: 24px;
+}
+
 .featured-services .icon-box:hover .title a, .featured-services .icon-box:hover .description {
   color: #fff;
 }

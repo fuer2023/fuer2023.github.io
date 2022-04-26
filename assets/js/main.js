@@ -167,7 +167,8 @@
           let dn = `
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-3 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <p class="description">${descn} - ${daten}</p>
+              <p class="description"><span class="datebadge">${daten}</span>${descn}</p>
+              
             </div>
           </div>
         `
