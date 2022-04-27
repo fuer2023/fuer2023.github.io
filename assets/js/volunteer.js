@@ -143,59 +143,6 @@
     }
   }, true)
 
-
-  const notice = () => {
-    const dailynoticeallxy = document.querySelector('#dailynoticeallxy');
-    const dailynoticeallfe = document.querySelector('#dailynoticeallfe');
-
-    let covidjson = '../data/covidnotice.json'
-
-    const mr = new Request(covidjson);
-    fetch(mr)
-      .then(response => response.json())
-      .then(data => {
-        let daily = data.daily;
-          let dailynoticefe = '';
-          for (let i of daily) {
-            if(i.a && i.a === 1) {
-              let daten = i.d.toString()
-              let descn = i.n.toString()
-              descn = descn.replaceAll('\n', '<br/>');
-              let dn = `
-              <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-3">
-                <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                  <p class="description"><span class="datebadge">${daten}</span>${descn}</p>
-                  
-                </div>
-              </div>
-            `
-              dailynoticefe += dn;
-            }
-          }
-          dailynoticeallfe.innerHTML = dailynoticefe;
-
-          let dailynoticexy = '';
-          for (let i of daily) {
-            if(i.a && i.a === 2) {
-              let daten = i.d.toString()
-              let descn = i.n.toString()
-              descn = descn.replaceAll('\n', '<br/>');
-              let dn = `
-              <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-3">
-                <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                  <p class="description"><span class="datebadge">${daten}</span>${descn}</p>
-                  
-                </div>
-              </div>
-            `
-              dailynoticexy += dn;
-            }
-          }
-          dailynoticeallxy.innerHTML = dailynoticexy;
-      });
-  }
-  document.addEventListener('DOMContentLoaded', notice, false);
-
   const navtime = () => {
     const navtimediv = document.querySelector('#time');
     let d = new Date();

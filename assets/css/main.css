@@ -121,14 +121,17 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   padding: 2px 10px;
   display: inline-block;
-  margin-right: 10px;
+  position: fixed;
+    top: 0;
+    right: 0;
+    box-shadow: 1px 3px 3px rgb(0 0 0 / 20%);
 }
 
-#services .icon-box {
+#shopping .icon-box {
   min-width: 174px;
 }
 
-#services .icon-box img {
+#shopping .icon-box img {
   width: 124px;
   max-height: 124px;
   display: inline-block;
@@ -655,6 +658,10 @@ section {
   font-size: 15px;
   line-height: 24px;
   margin-bottom: 0;
+}
+
+#noticexy .description, #noticefe .description {
+  padding-top: 20px;
 }
 
 #data .row>* {

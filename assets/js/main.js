@@ -152,25 +152,32 @@
     let covidjson = '../data/covidnotice.json'
 
     const mr = new Request(covidjson);
-    let dailynotice = '';
+    
     fetch(mr)
       .then(response => response.json())
       .then(data => {
         let daily = data.daily;
 
+        let dailynotice = '';
+        let j = 0;
         for (let i of daily) {
-          let daten = i.d.toString()
-          let descn = i.n.toString()
-          descn = descn.replaceAll('\n', '<br/>');
-          let dn = `
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-3 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <p class="description"><span class="datebadge">${daten}</span>${descn}</p>
-              
-            </div>
-          </div>
-        `
-          dailynotice += dn;
+          if(j<2) {
+            if(!i.h) {
+              let daten = i.d.toString()
+              let descn = i.n.toString()
+              descn = descn.replaceAll('\n', '<br/>');
+              let dn = `
+                <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-3">
+                  <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <p class="description"><span class="datebadge">${daten}</span>${descn}</p>
+                    
+                  </div>
+                </div>
+              `
+              dailynotice += dn;
+              j++;
+            }
+          }
         }
         dailynoticediv.innerHTML = dailynotice;
 
