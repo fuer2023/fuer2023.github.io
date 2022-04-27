@@ -156,13 +156,8 @@
     fetch(mr)
       .then(response => response.json())
       .then(data => {
-        todaydatep.innerHTML = data.today.d.toString();
-        todaynoticediv.innerHTML = data.today.n.toString().replaceAll('\n', '<br/>');
-
-        todayxianyidatep.innerHTML = data.todayxianyi.d.toString();
-        todayxianyinoticediv.innerHTML = data.todayxianyi.n.toString().replaceAll('\n', '<br/>');
-
         let daily = data.daily;
+
         for (let i of daily) {
           let daten = i.d.toString()
           let descn = i.n.toString()
@@ -178,6 +173,21 @@
           dailynotice += dn;
         }
         dailynoticediv.innerHTML = dailynotice;
+
+        for (let i of daily) {
+          if(i.h && i.h === true && i.a === 2) {
+            todayxianyidatep.innerHTML = i.d.toString();
+            todayxianyinoticediv.innerHTML = i.n.toString().replaceAll('\n', '<br/>');
+          }
+        }
+
+        for (let i of daily) {
+          if(i.h && i.h === true && i.a === 1) {
+            todaydatep.innerHTML = i.d.toString();
+            todaynoticediv.innerHTML = i.n.toString().replaceAll('\n', '<br/>');
+          }
+        }
+ 
 
       });
   }
