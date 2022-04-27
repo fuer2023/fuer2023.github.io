@@ -1288,11 +1288,6 @@ section {
   transition: 0.6s;
 }
 
-#aboutsvg svg {
-  width: 240px;
-  height: 240px;
-}
- 
 .contact .info-box {
   color: #444444;
   text-align: center;
