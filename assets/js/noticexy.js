@@ -145,7 +145,7 @@
 
 
   const notice = () => {
-    const dailynoticeallfe = document.querySelector('#dailynoticeallfe');
+    const dailynoticeallxy = document.querySelector('#dailynoticeallxy');
 
     let covidjson = '../data/covidnotice.json'
 
@@ -154,9 +154,11 @@
       .then(response => response.json())
       .then(data => {
         let daily = data.daily;
-        let dailynoticefe = '';
+
+
+        let dailynoticexy = '';
         for (let i of daily) {
-          if (i.a && i.a === 1) {
+          if (i.a && i.a === 2) {
             let daten = i.d.toString()
             let descn = i.n.toString()
             descn = descn.replaceAll('\n', '<br/>');
@@ -168,10 +170,10 @@
                 </div>
               </div>
             `
-            dailynoticefe += dn;
+            dailynoticexy += dn;
           }
         }
-        dailynoticeallfe.innerHTML = dailynoticefe;
+        dailynoticeallxy.innerHTML = dailynoticexy;
       });
   }
   document.addEventListener('DOMContentLoaded', notice, false);
