@@ -8,8 +8,8 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-  schedule:
-    - cron: '10 1,2,3,4,6,8 * * *'
+#  schedule:
+#    - cron: '10 1,2,3,4,6,8 * * *'
 
 jobs:
   build:
